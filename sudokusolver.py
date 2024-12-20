@@ -55,10 +55,6 @@ def place_number(board,row,col,count):
         #recursively calling the function
             if place_number(board,row,col+1,count):
                 return True
-            #backtracking- it checks if the next column is safe for count==1-9, if yes it prints count
-            #if no, the bprevious one becomes 0 and it continues the for loop of count from where it
-            #had stopped, if that loop also ends unsuccessfully, it goes to the previous col, as it was 
-            #also a reslut of forward checking
             board[row][col]=0
 #first call
 place_number(board,row,col,count)
